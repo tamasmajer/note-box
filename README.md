@@ -1,4 +1,4 @@
-# Text Tags
+# TagNote
 
 A simple text markup for personal notes and journals. 
 
