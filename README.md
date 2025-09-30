@@ -1,4 +1,4 @@
-# TagNote
+# TagIt
 
 A simple text markup for personal notes and journals. 
 
