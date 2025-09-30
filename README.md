@@ -54,10 +54,26 @@ A tag by itself creates a new entry, so add text to the same line to avoid start
 => Therefore
 ```
 
+Links do not need to be tags, you can simply add http://.. to the end of a line where it does not bother anybody. They are easy to find, and they should not be long anyway. 
+
 ## Parsing
 
 ```regex
 Section:    ^---$
-Entry:      (?:^|\n\n+)\[([a-zA-Z0-9 _.\-:/]+)\]
-Tag:        (?:^|\W)\[([a-zA-Z0-9 _.\-:/]+)\]
+Block:      \n\s*\n    # split at blank lines
+Entry:      (?:^|\n\s*\n)\[([a-zA-Z0-9 _.\-:/]+)\](?:\s*\[[a-zA-Z0-9 _.\-:/]+\])*\s*$    # allow multiple tags
+Tag:        (?:^|\W)\[([a-zA-Z0-9 _.\-:/]+)\]    # limit contents to prevent conflicts
+Link:       https?:\/\/[^\s<>\"]+
 ```
+
+## Why?
+
+- It is the laziest way I know to create structure in brain dumps.
+- One file can last very long, searchable, local, safe, always open, no need to remember where to find it.
+- Blocks are quotable, reusable, context independent.
+- Tags are lazy, they are basically just highlights for easy skimming.
+- Chronologic order, keep past journal entries as they are, but instead copy and meld their blocks into a new block.
+- Could create interesting views, like a concept wiki, or a current view (with the most recent or pinned ones on top), bookmarks view, etc.
+- I tried using other systems but I just keep coming back to this.
+- So it is worth the effort to explore whether it can evolve any further.
+
