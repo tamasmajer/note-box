@@ -1,4 +1,4 @@
-# TagNotes Spec
+# NoteBox Markup
 
 A simple text markup for personal notes and journals. 
 
