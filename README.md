@@ -56,6 +56,29 @@ A tag by itself creates a new entry, so add text to the same line to avoid start
 
 Links do not need to be tags, you can simply add http://.. to the end of a line where it does not bother anybody. They are easy to find, and they should not be long anyway. 
 
+You could use markdown-like links but separated with space like [link] (http://) to avoid markdown collision. Could reference images the same way. Or quoted "link" (http://).
+
+Markdown has embedded sections which we do not, so just put the subsections below and reference them from the parent section like `-> [subsection]`:
+```
+[Summary]:
+Main content here
+-> [Details]
+-> [More Info]
+```
+
+You can use a line containing only `:` to connect paragraphs or other content to create a single block, instead of concatenating them directly:
+```
+[Notes]:
+First paragraph
+:
+Second paragraph
+:
+Third paragraph
+```
+
+For emphasis without brackets, you could use quotes, like 'italic' or "bold" in markdown.
+
+
 ## Parsing
 
 ```regex
