@@ -1,6 +1,6 @@
 # NoteBox Markup
 
-A simple text markup for personal notes and journals. 
+The simplest text markup for personal notes and journals. 
 
 Just write, then use brackets to highlight, add dates, tags, etc.
 
